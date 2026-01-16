@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Quiz | Professional Assessment</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="canvas-bg"></canvas>
+
+<div class="app-container">
+
+    <!-- START SCREEN -->
+    <div id="start-screen" class="card active">
+        <h1>Quantum Quiz</h1>
+        <p>Test your knowledge with our professional assessment suite. 5 questions, instant results.</p>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+        </div>
+
+        <button id="start-btn" class="btn">Initialize Quiz</button>
+    </div>
+
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz-screen" class="card">
+        <div class="quiz-header">
+            <span id="question-count">Question 1/5</span>
+            <span>Category: General Tech</span>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <h2 id="question-text"></h2>
+
+        <div class="options-grid" id="options-container"></div>
+
+        <button id="next-btn" class="btn" disabled>Next Question</button>
+    </div>
+
+
+    <!-- RESULT SCREEN -->
+    <div id="result-screen" class="card">
+        <h1>Assessment Complete</h1>
+
+        <div class="score-circle" id="score-circle-outer">
+            <div class="score-inner">
+                <span class="score-number" id="final-score">0</span>
+                <span class="score-label">Score</span>
+            </div>
+        </div>
+
+        <p id="feedback-text"></p>
+
+        <button id="restart-btn" class="btn">Retake Assessment</button>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Professional Quiz Engine
+    </div>
+
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
